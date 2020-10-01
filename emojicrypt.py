@@ -4,6 +4,7 @@
 
 # ------------------------------------------------------------------------------
 import emojify
+import argparse, sys
 
 # ------------------------------------------------------------------------------
 class EmojiCrypt:
@@ -22,14 +23,26 @@ class EmojiCrypt:
 	def encrypt(self, txt):
 		return emojify.encode(txt, self.emoji_list)
 
+	def unit_test(self, test_txt="This is a test text: ABC abc 123 !@#"):
+		print(cipher.encrypt(test_txt))
+		print(cipher.decrypt(cipher.encrypt(test_txt)))
 
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
 	cipher = EmojiCrypt("cool")
-	test_txt = "aAbBcC 190 #$%"
+	# cipher.unit_test()
 
-	print(cipher.encrypt(test_txt))
-	print(cipher.decrypt(cipher.encrypt(test_txt)))
+	parser = argparse.ArgumentParser(description="Emoji Cipher")
+	group = parser.add_mutually_exclusive_group(required=True)
+	group.add_argument('-e', type=str, help="encrypt")
+	group.add_argument('-d', type=str, help="decrypt")
+	args = parser.parse_args()
+
+	if args.e:
+		print(cipher.encrypt(args.e))
+	
+	if args.d:
+		print(cipher.decrypt(args.d))
 
 # ------------------------------------------------------------------------------
 # EOF
