@@ -71,42 +71,83 @@ class EmojiCrypt:
 		# return out
 		return emojify.encode(out, self.emoji_list)
 
+	def decrypt_file(self, filepath):
+		try:
+			with open(filepath, 'r') as file:
+				lines = file.readlines()	
+			file.close()
+
+			with open(filepath, 'w') as file:
+				lines = map(self.decrypt, lines)
+				for each in list(lines):
+					file.write(each)
+		
+		except FileNotFoundError:
+			print(f"File not found: {filepath}")
+		
+		except:
+			print("Something went wrong while decrypting the file")
+
+	def encrypt_file(self, filepath):
+		try:
+			with open(filepath, 'r') as file:
+				lines = file.readlines()
+			file.close()
+
+			with open(filepath, 'w') as file:
+				lines = map(self.encrypt, lines)
+				for each in list(lines):
+					file.write(each)
+		
+		except FileNotFoundError:
+			print(f"File not found: {filepath}")
+		
+		except:
+			print("Something went wrong while encrypting the file")
+
 	def unit_test(self, test_txt="ABC abc 123 !@#"):
 		print(self.encrypt(test_txt))
 		print(self.decrypt(self.encrypt(test_txt)))
 
+		self.encrypt_file("test/text.txt")
+		self.decrypt_file("test/encrypted.txt")
+
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
-	# parser = argparse.ArgumentParser(description="Emoji Cipher")
-	# parser.add_argument('-k', type=str, help="keyword")
-	# group = parser.add_mutually_exclusive_group(required=True)
-	# group.add_argument('-e', type=str, help="encrypt")
-	# group.add_argument('-d', type=str, help="decrypt")
-	# group.add_argument('-ef', type=str, help="encrypt file")
-	# group.add_argument('-df', type=str, help="decrypt file")
-	# args = parser.parse_args()
+	parser = argparse.ArgumentParser(description="Emoji Cipher")
+	parser.add_argument('-k', type=str, help="keyword")
+	group = parser.add_mutually_exclusive_group(required=True)
+	group.add_argument('-e', type=str, help="encrypt")
+	group.add_argument('-d', type=str, help="decrypt")
+	group.add_argument('-ef', type=str, help="encrypt file")
+	group.add_argument('-df', type=str, help="decrypt file")
+	args = parser.parse_args()
 
-	# cipher = EmojiCrypt(args.k)
-	# # cipher.unit_test()
+	if args.k:
+		cipher = EmojiCrypt(args.k)
+		# cipher.unit_test()
 
-	# if args.e:
-	# 	print(cipher.encrypt(args.e))
+	else:
+		print("Please specify keyword using the -k option")
+		sys.exit()
+
+	if args.e:
+		print(cipher.encrypt(args.e))
 	
-	# elif args.d:
-	# 	print(cipher.decrypt(args.d))
+	elif args.d:
+		print(cipher.decrypt(args.d))
 
-	# elif args.ef:
-	# 	print("Encrypting file....", end="")
-	# 	cipher.encrypt_file(args.ef)
-	# 	print("Done")
+	elif args.ef:
+		print("Encrypting file....", end="")
+		cipher.encrypt_file(args.ef)
+		print("Done")
 
-	# elif args.ef:
-	# 	print("Decrypting file....", end="")
-	# 	cipher.decrypt_files(args.df)
-	# 	print("Done")
+	elif args.df:
+		print("Decrypting file....", end="")
+		cipher.decrypt_file(args.df)
+		print("Done")
 
-	cipher = EmojiCrypt("Cool")
-	cipher.unit_test()
+
 
 # ------------------------------------------------------------------------------
 # EOF
