@@ -3,6 +3,8 @@ Simple text encryption using emojis
 
 ![GIF](https://github.com/InputBlackBoxOutput/EmojiCrypt/blob/master/EmojiCrypt.gif)
 
+*Project inspired by the website: [emojicrypt.com](https://emojicrypt.com/)*
+
 ## Installation
 This software does not require installation however the user should have Python (3.8 or above) installed.
 
