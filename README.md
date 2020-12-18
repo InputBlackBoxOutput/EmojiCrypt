@@ -3,7 +3,14 @@ Simple text encryption using emojis
 
 ![GIF](https://github.com/InputBlackBoxOutput/EmojiCrypt/blob/master/EmojiCrypt.gif)
 
-*Project inspired by the website: [emojicrypt.com](https://emojicrypt.com/)*
+*This project inspired by the website: [emojicrypt.com](https://emojicrypt.com/)*
+
+###### EmojiCrypt's output can be effectively copied to the clipboard in some CLIs only
+
+|CLI|Copyable|
+|--|--|
+|Linux terminal (Ubuntu 20.04LTS)| ✔️|
+|Command prompt (Windows 10)| ❌|
 
 ## Installation
 This software does not require installation however the user should have Python (3.8 or above) installed.
