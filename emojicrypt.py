@@ -164,12 +164,17 @@ class AESCipher:
 		return str(enc)[2:-1]
 
 	def decrypt(self, strg):
-		enc = bytes(strg, 'utf8')
-		enc = base64.b64decode(enc)
-		iv = enc[:AES.block_size]
-		cipher = AES.new(self.key, AES.MODE_CFB, iv)
-		return cipher.decrypt(enc[AES.block_size:]).decode('utf-8')
-		# return self._unpad(cipher.decrypt(enc[AES.block_size:])).decode('utf-8')
+		try:
+			enc = bytes(strg, 'utf8')
+			enc = base64.b64decode(enc)
+			iv = enc[:AES.block_size]
+			cipher = AES.new(self.key, AES.MODE_CFB, iv)
+			return cipher.decrypt(enc[AES.block_size:]).decode('utf-8')
+			# return self._unpad(cipher.decrypt(enc[AES.block_size:])).decode('utf-8')
+		except:
+			print("\nLooks like the entered cipher text is invalid or the keyword is wrong!")
+			sys.exit()  
+
 
 	# Padding required for GCM and CBC modes (Not used)
 	def _pad(self, s):
