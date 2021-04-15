@@ -9,6 +9,7 @@ AES encryption encoded using emojis
 |--|--|
 |Linux terminal (Ubuntu 20.04LTS)| ✔️|
 |Command prompt (Windows 10)| ❌|
+|Windows Terminal (Windows 10)|✔️|
 
 * File encryption uses Vigenere's cipher instead of AES cipher to reduce computation
 
@@ -30,6 +31,9 @@ Python can be downloaded from www.python.org
 |-ef| Encrypt file|
 |-df| Decrypt file|
 |-h, --help|show the help message and exit|
+
+## Usage via Docker
+Run the following command: <code> docker run -it rutuparn/emojicrypt </code>
 
 ## Disclaimer:
 *Under no circumstances will the creator/s of this application be held responsible or liable in any way for any claims, damages, losses, expenses, costs or liabilities whatsoever (including, without limitation, any direct or indirect damages for loss of profits, business interruption or loss of information) resulting or arising directly or indirectly from your use of or inability to use this application even if the creator/s of this application have been advised of the possibility of such damages in advance.*
