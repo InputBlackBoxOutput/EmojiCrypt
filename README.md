@@ -14,7 +14,7 @@ AES encryption encoded using emojis
 
 - File encryption uses Vigenere's cipher instead of AES cipher to reduce computation
 
-_This project was inspired by the website: [emojicrypt.com](https://emojicrypt.com/)_
+*This project was inspired by the website: [emojicrypt.com](https://emojicrypt.com/)*
 
 ## Installation
 
@@ -37,7 +37,7 @@ Python can be downloaded from www.python.org
 
 ## Usage via Docker
 
-Run the following command: <code> docker run -it rutuparn/emojicrypt </code>
+Run the following command: <code> docker run -it --rm rutuparn/emojicrypt </code>
 
 **Note**: The docker image supports only text input
 
