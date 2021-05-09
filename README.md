@@ -12,15 +12,7 @@ AES encryption encoded using emojis
 | Command prompt (Windows 10)      | ❌       |
 | Windows Terminal (Windows 10)    | ✔️       |
 
-- File encryption uses Vigenere's cipher instead of AES cipher to reduce computation
-
-*This project was inspired by the website: [emojicrypt.com](https://emojicrypt.com/)*
-
-## Installation
-
-This software does not require installation however the user should have Python (3.8 or above) installed.
-
-Python can be downloaded from www.python.org
+- Text file encryption uses Vigenere's cipher instead of AES cipher
 
 ## Usage
 
