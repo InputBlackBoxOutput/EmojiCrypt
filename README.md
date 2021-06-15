@@ -12,6 +12,7 @@ AES encryption encoded using emojis
 | Linux terminal (Ubuntu 20.04LTS)                   | ✔️       |
 | Command prompt (Windows 10)                        | ❌       |
 | Windows Terminal (Windows 10)                      | ✔️       |
+| Docker Playground                                  | ❌       |
 
 - Text file encryption uses Vigenere's cipher instead of AES cipher
 
@@ -32,7 +33,7 @@ cipher.decrypt(str(input("\nEnter cipher text: ")))
 
 ### Usage on a Command Line Interface (CLI)
 
-<code> emojicrypt.py [-h] [-k K] (-e E | -d D | -ef EF | -df DF) </code>
+<code> python emojicrypt.py [-h] [-k K] (-e E | -d D | -ef EF | -df DF) </code>
 
 | Option     | Description                    |
 | ---------- | ------------------------------ |
