@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+emojicrypt.egg-info/PKG-INFO
+emojicrypt.egg-info/SOURCES.txt
+emojicrypt.egg-info/dependency_links.txt
+emojicrypt.egg-info/top_level.txt

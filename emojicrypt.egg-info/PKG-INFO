@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: emojicrypt
+Version: 0.1.0
+Summary: AES encryption encoded using emojis
+Home-page: UNKNOWN
+Author: Rutuparn Pawar
+Author-email: rutuparn.17U253@viit.ac.in
+License: UNKNOWN
+Description: Module to perform AES encryption on text and than encoded it using emojis
+Keywords: emojis,encoding,AES,encryption
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
