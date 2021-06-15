@@ -1,0 +1,12 @@
+# Setup 
+Copy all files to the emojicrypt directory 
+Edit VERSION variable in setup.py to represent the version 
+Delete directories created during previous build
+
+# Build the python module
+# pip install wheel
+python setup.py sdist bdist_wheel
+
+# Upload the module to PyPI
+# pip install twine
+twine upload dist/*

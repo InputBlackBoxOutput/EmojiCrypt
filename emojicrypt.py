@@ -209,10 +209,10 @@ if __name__ == '__main__':
 		sys.exit()
 
 	if args.e:
-		print(cipher.encrypt_vc(args.e))
+		print(cipher.encrypt(args.e))
 	
 	elif args.d:
-		print(cipher.decrypt_vc(args.d))
+		print(cipher.decrypt(args.d))
 
 	elif args.ef:
 		print("Encrypting file....", end="")

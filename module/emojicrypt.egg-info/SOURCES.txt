@@ -1,7 +1,10 @@
-LICENSE
-README.md
 setup.py
+emojicrypt/__init__.py
+emojicrypt/emojicrypt.py
+emojicrypt/emojify.py
+emojicrypt/main.py
 emojicrypt.egg-info/PKG-INFO
 emojicrypt.egg-info/SOURCES.txt
 emojicrypt.egg-info/dependency_links.txt
+emojicrypt.egg-info/requires.txt
 emojicrypt.egg-info/top_level.txt

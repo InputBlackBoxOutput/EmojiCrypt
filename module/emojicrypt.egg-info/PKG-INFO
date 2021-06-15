@@ -1,8 +1,8 @@
 Metadata-Version: 1.1
 Name: emojicrypt
-Version: 0.1.0
+Version: 1.0.2
 Summary: AES encryption encoded using emojis
-Home-page: UNKNOWN
+Home-page: https://github.com/InputBlackBoxOutput/EmojiCrypt
 Author: Rutuparn Pawar
 Author-email: rutuparn.17U253@viit.ac.in
 License: UNKNOWN
