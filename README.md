@@ -2,7 +2,7 @@
 
 AES encryption encoded using emojis
 
-![GIF](demo.gif)
+![GIF](https://github.com/InputBlackBoxOutput/EmojiCrypt/blob/c75b05677d706a541283cb15d247909b58f2ce7e/EmojiCrypt.gif)
 
 - EmojiCrypt's output can be effectively copied to the clipboard in some CLIs only
 
@@ -20,7 +20,7 @@ AES encryption encoded using emojis
 ### Usage as a python module
 Install the module using <code>pip install emojicrypt</code>
 
-<code>
+```python
 from emojicrypt import EmojiCrypt
 
 keyword = str(input("Enter keyord:"))
@@ -28,7 +28,7 @@ cipher = EmojiCrypt(keyword)
 
 cipher.encrypt(str(input("\nEnter plain text: ")))
 cipher.decrypt(str(input("\nEnter cipher text: ")))
-</code>
+```
 
 ### Usage on a Command Line Interface (CLI)
 
