@@ -14,11 +14,9 @@ AES encryption encoded using emojis
 | Windows Terminal (Windows 10)                      | ✔️       |
 | Docker Playground                                  | ❌       |
 
-- Text file encryption uses Vigenere's cipher instead of AES cipher
+- Text file encryption uses Vigenere's cipher instead of AES cipher because AES is computationally expensive and not suitable for large files. The output of Vigenere's cipher is also encoded using emojis.
 
-## Usage
-
-### Usage as a python module
+## Use as a python module
 Install the module using <code>pip install emojicrypt</code>
 
 ```python
@@ -31,24 +29,14 @@ cipher.encrypt(str(input("\nEnter plain text: ")))
 cipher.decrypt(str(input("\nEnter cipher text: ")))
 ```
 
-### Usage on a Command Line Interface (CLI)
+## Use from a command line
+```
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
 
-<code> python emojicrypt.py [-h] [-k K] (-e E | -d D | -ef EF | -df DF) </code>
-
-| Option     | Description                    |
-| ---------- | ------------------------------ |
-| -k         | Keyword                        |
-| -e         | Encrypt text                   |
-| -d         | Decrypt text                   |
-| -ef        | Encrypt file                   |
-| -df        | Decrypt file                   |
-| -h, --help | show the help message and exit |
-
-## Usage by creating container from docker image
-
-Run the following command: <code> docker run -it --rm rutuparn/emojicrypt </code>
-
-**Note**: The docker image supports only text input
+python emojicrypt.py 
+```
 
 ## Disclaimer:
 
