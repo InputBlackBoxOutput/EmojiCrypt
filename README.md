@@ -2,7 +2,7 @@
 
 AES encryption encoded using emojis
 
-![GIF](https://github.com/InputBlackBoxOutput/EmojiCrypt/blob/c75b05677d706a541283cb15d247909b58f2ce7e/EmojiCrypt.gif)
+![GIF](demo.gif)
 
 - EmojiCrypt's output can be effectively copied to the clipboard in some CLIs only
 

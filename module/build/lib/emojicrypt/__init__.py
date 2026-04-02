@@ -1,1 +1,0 @@
-from emojicrypt.emojicrypt import EmojiCrypt
