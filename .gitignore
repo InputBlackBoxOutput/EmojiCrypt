@@ -1,2 +1,63 @@
-__pycache__/ 
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
 env/
+venv/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Mypy
+.mypy_cache/
+
+# Pyre
+.pyre/
+
+# Coverage
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# pipenv
+Pipfile.lock
+
+# local configuration
+*.local
+
+# log files
+*.log
+
+# secret files
+secrets.yml

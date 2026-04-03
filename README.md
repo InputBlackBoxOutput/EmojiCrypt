@@ -31,11 +31,22 @@ cipher.decrypt(str(input("\nEnter cipher text: ")))
 
 ## Use from a command line
 ```
+pip install emojicrypt
+python -m emojicrypt.py 
+```
+
+## Build as a python package and upload to PyPI
+```
+# Create a virtual environment and activate it
 python -m venv env
 source env/bin/activate
-pip install -r requirements.txt
 
-python emojicrypt.py 
+# Build wheel and source distribution 
+pip install build twine
+python -m build
+
+# Upload to PyPI using twine
+twine upload dist/*
 ```
 
 ## Disclaimer:
